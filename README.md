@@ -11,11 +11,11 @@ Write an interface for a data structure that can provide the moving average of t
 3. Provide any additional explanation about the interface and implementation in a README file.
 
 
-**There are 2 solution provided**:
+**There are 2 solutions provided**:
 
 1. Solution1:
-  Implementation of MovingAverage based on assumptions that moving N  provided as function's parameter getMovingAverage(int MovingN) and we persist all added items.
-  Complexity for getMovingAverage(int MovingN) is O(n) - we will scan all items in the list
+  Implementation of MovingAverage based on assumptions that moving N  provided as function's parameter getMovingAverage(int movingN) and we persist all added items.
+  Complexity for getMovingAverage(int movingN) is O(n) - we will scan all items in the list
 
 2. Solution2:
   Implementation of MovingAverageEff based on assumptions that moving N provided ones in constructor and only items used in Moving N calculation are persists.
@@ -39,12 +39,13 @@ We need to provide Google Analytic like services to our customers. Please provid
 5. Have the ability to reprocess historical data in case of bugs in the processing logic.
 
 
-** Solution** 
+**Solution**:
 To implement requirements we would need the following high level components:
 - load balancing functionality to ensure high performance under high volume events number
 - services based on microservice architecture for horizontal scalability
 - hi-performance, fault-tolerant distributed streaming platform for asynchronous processing  - Kafka.
-- scalable and high-performing data storage  noSQL db (Casandra)  - Grafana and Influx db for time metrics service
+- scalable and high-performing data storage  noSQL db (Casandra) 
+- Grafana and Influx db for time metrics service
 
 The following set of microservices will be used (diagram in PaytmLabs_DesignGoogleAnalitics.pptx) : 
 1. events-accept: RESTful microservice which will accept customer events and have Kafka producers to publish data messages into Kafka topic streams. 
