@@ -23,6 +23,7 @@ Write an interface for a data structure that can provide the moving average of t
   - add item to the end of LinkedList to end is O(1)
   - remove first item from head of LinkedList is O(1)
 
+TestNg unit tests provided to verify solutions.
 
 
 ## Design Question
